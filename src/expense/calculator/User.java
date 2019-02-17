@@ -21,6 +21,27 @@ public class User extends Person {
         uMobileNo = mobNo;
     }
     
+    public void setUserEmail(String email)
+    {
+        uEmail = email;
+    }
+    
+    public void setUserMobNo(int number)
+    {
+        uMobileNo = number;
+    }
+    
+    public String getUserEmail()
+    {
+        return uEmail;
+    }
+    
+    public int getUserMobNo()
+    {
+        return uMobileNo;
+    }
+    
+    
     
     
 }
