@@ -21,6 +21,16 @@ public class Friends {
         friendEmail = fEmail;
         FriendMobileno = fmobilenumber;
     }
-    
-    
+    public void setFname(String name)
+    {
+        friendName = name;
+    }
+     public void setFemail(String email)
+    {
+        friendEmail = email;
+    }
+      public void setFmobile(int mobile)
+    {
+        FriendMobileno = mobile;
+    }
 }
