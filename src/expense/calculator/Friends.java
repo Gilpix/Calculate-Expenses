@@ -15,5 +15,12 @@ public class Friends {
     String friendEmail;
     int    FriendMobileno;
     
+    public Friends(String fname,String fEmail,int fmobilenumber)
+    {
+        friendName = fname;
+        friendEmail = fEmail;
+        FriendMobileno = fmobilenumber;
+    }
+    
     
 }
