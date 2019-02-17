@@ -11,6 +11,11 @@ package expense.calculator;
  */
 public class Details {
     
+    String detailsDate;
     
+    public Details (String Ddate)
+    {
+        detailsDate = Ddate;
+    }
     
 }
