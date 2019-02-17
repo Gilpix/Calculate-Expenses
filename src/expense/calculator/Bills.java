@@ -10,5 +10,10 @@ package expense.calculator;
  * @author temp
  */
 public class Bills {
+    String bill_type;
+    String bill_description;
+    double bill_amount;
+    String bill_date;
+    String bill_member;
     
 }
