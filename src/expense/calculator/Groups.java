@@ -12,9 +12,14 @@ package expense.calculator;
 public class Groups {
     String groupname;
     String groupmember;
-    
-    
-            
+ 
+   public Groups (String Gname,String Gmember) 
+   {
+       groupname = Gname;
+       groupmember = Gmember;
+       
+   }
+           
     
     
 }
