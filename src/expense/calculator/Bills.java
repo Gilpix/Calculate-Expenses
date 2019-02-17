@@ -15,6 +15,26 @@ public class Bills {
     double bill_amount;
     String bill_date;
     String bill_member;
+    private User us;
+    private GroupAdmin gad;
+    
+    public Bills(String bt,String bdes,double bamt,String bdt,String bmem)
+    {
+        bill_type = bt;
+        bill_description = bdes;
+        bill_amount = bamt;
+        bill_date = bdt;
+        bill_member = bmem;
+    }
+    
+    public void User(User newUsr)
+    {
+        this.us = newUsr;
+    }
+    public void GroupAdmin(GroupAdmin newgad)
+    {
+        this.gad = newgad;
+    }
     
   public void setBName(String btyp)
     {
@@ -62,5 +82,6 @@ public class Bills {
           return bill_member;
          
       }
-          
+         
+       
 }
