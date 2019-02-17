@@ -12,12 +12,23 @@ package expense.calculator;
 public class GroupMember {
     String member_name;
     String member_email;
+    private Groups gp;
+    private GroupAdmin gad;
     
     public GroupMember(String mn,String me)
     {
         member_name = mn;
         member_email = me;
     }
+    public void Groups(Groups newgp)
+    {
+        this.gp = newgp;
+    }
+    public void GroupAdmin(GroupAdmin newgad)
+    {
+        this.gad = newgad;
+    }
+    
     public void setMName(String mname)
     {
         member_name = mname;
