@@ -13,6 +13,11 @@ public class GroupMember {
     String member_name;
     String member_email;
     
+    public GroupMember(String mn,String me)
+    {
+        member_name = mn;
+        member_email = me;
+    }
     public void setMName(String mname)
     {
         member_name = mname;
