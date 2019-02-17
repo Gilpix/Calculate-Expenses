@@ -33,4 +33,19 @@ public class Friends {
     {
         FriendMobileno = mobile;
     }
+      public String getFname()
+      {
+          return friendName;
+         
+      }
+       public String getFemail()
+      {
+          return friendEmail;
+         
+      }
+           public int getFmobile()
+      {
+          return FriendMobileno;
+         
+      }
 }
