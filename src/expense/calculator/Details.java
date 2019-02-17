@@ -17,5 +17,13 @@ public class Details {
     {
         detailsDate = Ddate;
     }
+    public void setDdate(String date)
+    {
+       detailsDate =  date;
+    }
+    public String getddate()
+    {
+        return detailsDate;
+    }
     
 }
