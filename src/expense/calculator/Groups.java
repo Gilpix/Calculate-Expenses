@@ -19,7 +19,21 @@ public class Groups {
        groupmember = Gmember;
        
    }
-           
-    
+     public void setname(String Gname)
+     {
+       groupname =  Gname; 
+     }
+    public void setmember(String Gmember)
+    {
+       groupmember  = Gmember;
+    }
+    public String getgname()
+            {
+                return groupname;
+            }
+    public String getgmember()
+    {
+        return groupmember;
+    }
     
 }
