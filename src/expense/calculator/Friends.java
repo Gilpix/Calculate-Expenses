@@ -11,4 +11,9 @@ package expense.calculator;
  */
 public class Friends {
     
+    String friendName;
+    String friendEmail;
+    int    FriendMobileno;
+    
+    
 }
