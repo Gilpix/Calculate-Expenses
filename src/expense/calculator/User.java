@@ -11,30 +11,24 @@ package expense.calculator;
  */
 public class User extends Person {
     
-    String uEmail;
+    
     int uMobileNo;
     
-    public User(String email, int mobNo, String fName, String lName)
+    public User( int mobNo, String fName, String lName, String pEmail)
     {
-        super(fName,lName);
-        uEmail = email;
+        super(fName,lName, pEmail);
+       
         uMobileNo = mobNo;
     }
     
-    public void setUserEmail(String email)
-    {
-        uEmail = email;
-    }
+    
     
     public void setUserMobNo(int number)
     {
         uMobileNo = number;
     }
     
-    public String getUserEmail()
-    {
-        return uEmail;
-    }
+    
     
     public int getUserMobNo()
     {
