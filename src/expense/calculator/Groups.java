@@ -13,12 +13,18 @@ public class Groups {
     String groupname;
     String groupmember;
     String date;
- 
+  private GroupAdmin gpa;
    public Groups (String Gname,String Gmember,String GDate) 
    {
        groupname = Gname;
        groupmember = Gmember;
        date = GDate;
+     
+   }
+   
+   public void GroupAdmin(GroupAdmin newgpa)
+   {
+       this.gpa = newgpa;
    }
      public void setname(String Gname)
      {
