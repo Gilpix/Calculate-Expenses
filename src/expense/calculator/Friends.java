@@ -14,12 +14,17 @@ public class Friends {
     String friendName;
     String friendEmail;
     int    FriendMobileno;
+    private User us;
     
     public Friends(String fname,String fEmail,int fmobilenumber)
     {
         friendName = fname;
         friendEmail = fEmail;
         FriendMobileno = fmobilenumber;
+    }
+    public void User(User newUsr)
+    {
+        this.us = newUsr;
     }
     public void setFname(String name)
     {
