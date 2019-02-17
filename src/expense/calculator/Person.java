@@ -10,5 +10,31 @@ package expense.calculator;
  * @author temp
  */
 public class Person {
+    String lastName, firstName;
+    
+    public Person(String lName, String fName)
+    {
+        lastName = lName;
+        firstName = fName;
+    }
+    
+    public void setLastName(String lName)
+    {
+        lastName = lName;
+    }
+    
+    public void setFirstName(String fName)
+    {
+        firstName = fName;
+    }
+    
+    public String getFName()
+    {
+        return firstName;
+    }
+    public String getLName()
+    {
+        return lastName;
+    }
     
 }
