@@ -12,12 +12,13 @@ package expense.calculator;
 public class Groups {
     String groupname;
     String groupmember;
+    String date;
  
-   public Groups (String Gname,String Gmember) 
+   public Groups (String Gname,String Gmember,String GDate) 
    {
        groupname = Gname;
        groupmember = Gmember;
-       
+       date = GDate;
    }
      public void setname(String Gname)
      {
@@ -27,6 +28,10 @@ public class Groups {
     {
        groupmember  = Gmember;
     }
+    public void setDate(String GDate)
+    {
+        date = GDate;
+    }
     public String getgname()
             {
                 return groupname;
@@ -34,6 +39,10 @@ public class Groups {
     public String getgmember()
     {
         return groupmember;
+    }
+    public String getgdate()
+    {
+        return date;
     }
     
 }
