@@ -17,6 +17,7 @@ public class Bills {
     String bill_member;
     private User us;
     private GroupAdmin gad;
+    private GroupMember gmem;
     
     public Bills(String bt,String bdes,double bamt,String bdt,String bmem)
     {
@@ -34,6 +35,10 @@ public class Bills {
     public void GroupAdmin(GroupAdmin newgad)
     {
         this.gad = newgad;
+    }
+    public void GroupMember(GroupMember newgmem)
+    {
+        this.gmem = newgmem;
     }
     
   public void setBName(String btyp)
