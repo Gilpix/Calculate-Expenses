@@ -12,10 +12,11 @@ package expense.calculator;
 public class Person {
     String lastName, firstName, pEmail;
     
-    public Person(String lName, String fName, String email)
+    public Person(String fName, String lName, String email)
     {
-        lastName = lName;
+        
         firstName = fName;
+        lastName = lName;
         pEmail = email;
     }
     
