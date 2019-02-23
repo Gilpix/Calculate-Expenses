@@ -4,12 +4,22 @@
  * and open the template in the editor.
  */
 package expense.calculator;
+import java.util.Calendar;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  *
  * @author temp
  */
 public class User extends Person {
+    
+    
+    Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	Calendar cal = Calendar.getInstance();
+	
+       
     
     
     int uMobileNo;
@@ -33,6 +43,11 @@ public class User extends Person {
     public int getUserMobNo()
     {
         return uMobileNo;
+    }
+    
+    public void getcurrentDate()
+    {
+        System.out.println(dateFormat.format(cal.getTime())); //2016/11/16 12:08:43   
     }
     
     
