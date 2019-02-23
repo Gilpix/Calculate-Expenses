@@ -12,10 +12,14 @@ package expense.calculator;
 public class Details {
     
     String detailsDate;
+    GroupMember gm;
+    Groups gp;
+    
     
     public Details (String Ddate)
     {
         detailsDate = Ddate;
+        
     }
     public void setDdate(String date)
     {
