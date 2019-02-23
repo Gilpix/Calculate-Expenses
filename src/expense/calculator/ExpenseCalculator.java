@@ -18,10 +18,10 @@ public class ExpenseCalculator {
         // TODO code application logic here\
         
         
-        User u = new User(9923,"Kuldeep","Singh","kul@gmail.com");
-        char f=u.getFName().charAt(0);
-        //char l=u.getLName().charAt(0);
-         System.out.println("Today's date : "+u.getcurrentDate()+"-"+f);
+        User u = new User(9923,"Kuldeep"," ","kul@gmail.com");
+        
+     
+         System.out.println("user Current ID : "+u.getId());
         
     }
     
