@@ -5,6 +5,8 @@
  */
 package expense.calculator;
 
+import java.util.Calendar;
+
 /**
  *
  * @author temp
@@ -13,9 +15,9 @@ public class GroupAdmin extends Person {
 
     String groupName;
 
-    public GroupAdmin(String gName, String fName, String lName, String pEmail)
+    public GroupAdmin(String gName, String fName, String lName, String pEmail,Calendar newId)
     {
-        super(fName,lName, pEmail);
+        super(fName,lName, pEmail,newId);
         groupName = gName;
     }
 
