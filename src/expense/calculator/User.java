@@ -25,13 +25,13 @@ public class User extends Person {
     
     int uMobileNo;
     private String id;
-   
     
+      
     public User( int mobNo, String fName, String lName, String pEmail)
     {
         super(fName,lName, pEmail);
         id=this.getUserCurrentId();
-       
+
         uMobileNo = mobNo;
     }
     
@@ -51,7 +51,7 @@ public class User extends Person {
     
     public String getUserCurrentId()
     {
-        //System.out.println(dateFormat.format(cal.getTime())); //2016/11/16 12:08:43   
+       
           char f;
           char l;
               char hyphen='-';
@@ -59,12 +59,15 @@ public class User extends Person {
             f='X';
             else
              f=getFName().charAt(0);
-        
+     
          if(getLName().charAt(0)==' ')
             l='X';
             else
              l=getLName().charAt(0);
         
+         
+         f = Character.toUpperCase(f);
+         l = Character.toUpperCase(l);
          
          String dte= dateFormat.format(cal.getTime());
          String year,month,oe;
@@ -84,11 +87,11 @@ public class User extends Person {
           else
               oe="O";  
          return  year+hyphen+month+hyphen+oe+hyphen+f+l;
-        
+
     }
 
     public String getId() {
-        return id;
+        return getUserCurrentId();
     }
 
     public void setId(String id) {
