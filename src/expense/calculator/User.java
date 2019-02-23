@@ -16,7 +16,7 @@ public class User extends Person {
     
     
     Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
 	Calendar cal = Calendar.getInstance();
 	
        
@@ -45,9 +45,10 @@ public class User extends Person {
         return uMobileNo;
     }
     
-    public void getcurrentDate()
+    public String getcurrentDate()
     {
-        System.out.println(dateFormat.format(cal.getTime())); //2016/11/16 12:08:43   
+        //System.out.println(dateFormat.format(cal.getTime())); //2016/11/16 12:08:43   
+        return dateFormat.format(cal.getTime()); //2016/11/16 12:08:43   
     }
     
     
