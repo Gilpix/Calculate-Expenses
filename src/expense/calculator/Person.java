@@ -43,4 +43,9 @@ public class Person {
         return lastName;
     }
     
+    public String getPEmail()
+    {
+        return pEmail;
+    }
+    
 }
