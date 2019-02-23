@@ -19,17 +19,14 @@ public class User extends Person {
     DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
 	Calendar cal = Calendar.getInstance();
        
-	
-       
-    
-    
+
     int uMobileNo;
     private String id;
     
       
-    public User( int mobNo, String fName, String lName, String pEmail)
+    public User( int mobNo, String fName, String lName, String pEmail, Calendar newId)
     {
-        super(fName,lName, pEmail);
+        super(fName,lName, pEmail,newId);
         id=this.getUserCurrentId();
 
         uMobileNo = mobNo;
@@ -96,6 +93,17 @@ public class User extends Person {
 
     public void setId(String id) {
         this.id = id;
+    }
+    
+    public  void userDisplay()
+    {
+         System.out.println("User Current ID : "+getId());
+        System.out.println("User First Name : "+getFName());
+        System.out.println("User Last Name : "+getLName());
+        System.out.println("User Mob No : "+getUserMobNo());
+        System.out.println("User Email : "+getPEmail());
+        
+        super.personDisplay();
     }
     
     
