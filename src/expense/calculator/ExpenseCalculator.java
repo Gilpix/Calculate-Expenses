@@ -5,6 +5,8 @@
  */
 package expense.calculator;
 
+import java.util.Calendar;
+
 /**
  *
  * @author temp
@@ -18,42 +20,40 @@ public class ExpenseCalculator {
         // TODO code application logic here\
 
         
-        Person p = new Person("Kuldeep"," ","kul@gmail.com");
+        Person p = new Person("Kuldeep"," ","kul@gmail.com", Calendar.getInstance());
         p.setFirstName("Kamal");
         p.setLastName("Padda");
         p.setPEmail("kamal@1212");
+        p.personDisplay();
         
         
          System.out.println("\n---------------------");
         
         
-        User u = new User(992386513,"Kuldeep"," ","kul@gmail.com");
+        User u = new User(992386513,"Kuldeep"," ","kul@gmail.com", Calendar.getInstance());
         u.setUserMobNo(514292151);
         u.setFirstName("Anju");
         u.setLastName("Paul");
         u.setPEmail("Kuldeep@gmail.com");
-        System.out.println("user Current ID : "+u.getId());
-        System.out.println("User First Name : "+u.getFName());
-        System.out.println("User Last Name : "+u.getLName());
-        System.out.println("User Mob No : "+u.getUserMobNo());
-        System.out.println("User Email : "+u.getPEmail());
+        u.userDisplay();
         
         
         
          System.out.println("\n---------------------");
         
         
-        GroupAdmin ga = new GroupAdmin("Apartment","Kuldeep"," ","kul@gmail.com");
+        GroupAdmin ga = new GroupAdmin("Apartment","Kuldeep"," ","kul@gmail.com", Calendar.getInstance());
         ga.setAdminGroupName("Niagra Falls");
         ga.setFirstName("Raminder");
         ga.setLastName("Singh");
         ga.setPEmail("raminder@gmail.com");
-        System.out.println("Group Admin Group name : "+ga.getAdminGroupName());
-        System.out.println("Group Admin Name : "+ga.getFName()+" "+ga.getLName());
-        System.out.println("Group Admin Email : "+ga.getPEmail());
+        ga.groupAdminDisplay();
         
-         System.out.println("\n---------------------");
+        System.out.println("\n---------------------");
         
+         
+         
+         
         GroupMember gm=new GroupMember("Kamaldeep","kamal@gmail.com");
         gm.setMName("Kamal Padda");
         gm.setMEmail("kamala@gmail.com");
@@ -61,6 +61,7 @@ public class ExpenseCalculator {
         System.out.println("Group Member Email : "+gm.getMEmail());
         
          System.out.println("\n---------------------");
+         
         
         Friends f= new Friends("Kamaldeep","kamal@gmail.com",99238651);
         f.setFname("Kul Singh");
