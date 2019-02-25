@@ -17,7 +17,7 @@ public class User extends Person {
     
     Calendar calendar = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-	Calendar cal = Calendar.getInstance();
+    Calendar cal = Calendar.getInstance();
        
 
     int uMobileNo;
@@ -27,7 +27,7 @@ public class User extends Person {
     public User( int mobNo, String fName, String lName, String pEmail, Calendar newId)
     {
         super(fName,lName, pEmail,newId);
-        id=this.getUserCurrentId();
+       // id=this.getUserCurrentId();
 
         uMobileNo = mobNo;
     }
@@ -102,7 +102,6 @@ public class User extends Person {
         System.out.println("User Last Name : "+getLName());
         System.out.println("User Mob No : "+getUserMobNo());
         System.out.println("User Email : "+getPEmail());
-        
         super.personDisplay();
     }
     
