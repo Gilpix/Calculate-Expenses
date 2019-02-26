@@ -20,17 +20,14 @@ public class ExpenseCalculator {
         // TODO code application logic here\
 
         
-        Person p = new Person("Kuldeep"," ","kul@gmail.com", Calendar.getInstance());
-        p.setFirstName("Kamal");
-        p.setLastName("Padda");
-        p.setPEmail("kamal@1212");
+        /*Person p = new Person("Kuldeep","Singh","kul@gmail.com", Calendar.getInstance());
         p.personDisplay();
-        
+        */
         
          System.out.println("\n---------------------");
         
         
-        User u = new User(992386513,"Kuldeep"," ","kul@gmail.com", Calendar.getInstance());
+        User u = new User(992386513,"Kuldeep","Singh","kul@gmail.com", Calendar.getInstance());
         u.setUserMobNo(514292151);
         u.setFirstName("Anju");
         u.setLastName("Paul");
@@ -38,7 +35,7 @@ public class ExpenseCalculator {
         u.userDisplay();
         
         
-        
+        /*
          System.out.println("\n---------------------");
         
         
@@ -91,7 +88,7 @@ public class ExpenseCalculator {
         d.setDdate("2019-02-15");
         System.out.println("Date Details of bill : "+d.getddate());
         
-        
+        */
     }
     
 }
