@@ -26,7 +26,7 @@ public class Person {
     
     public Person(String fName, String lName, String email, Calendar newid)
     {
-        id = getUserCurrentId(fName,newid);
+        id = getUserCurrentId(fName,lName,newid);
         firstName = fName;
         lastName = lName;
         pEmail = email;
@@ -69,7 +69,7 @@ public class Person {
         System.out.println("Person Email : "+getPEmail());
     }
     
-     public String getUserCurrentId(String fname, Calendar id)
+     public String getUserCurrentId(String fname, String lName, Calendar id)
     {
         Calendar calendar = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
@@ -78,15 +78,15 @@ public class Person {
           char f;
           char l;
               char hyphen='-';
-        if(getFName().charAt(0)==' ')
+        if(fname.charAt(0)==' ')
             f='X';
             else
-             f=getFName().charAt(0);
+             f=fname.charAt(0);
      
-         if(getLName().charAt(0)==' ')
+         if(lName.charAt(0)==' ')
             l='X';
             else
-             l=getLName().charAt(0);
+             l=lName.charAt(0);
         
          
          f = Character.toUpperCase(f);
