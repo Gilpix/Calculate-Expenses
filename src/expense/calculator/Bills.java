@@ -5,11 +5,20 @@
  */
 package expense.calculator;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  *
  * @author temp
  */
 public class Bills {
+    
+    Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
+    
     String bill_type;
     String bill_description;
     double bill_amount;
@@ -31,7 +40,7 @@ public class Bills {
         bill_member = bmem;
         
     }
-    //anju
+    
     public void User(User newUsr)
     {
         this.us = newUsr;
