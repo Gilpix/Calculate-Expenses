@@ -15,6 +15,9 @@ public class Bills {
     double bill_amount;
     String bill_date;
     String bill_member;
+    
+    private String id;
+    
     private User us;
     private GroupAdmin gad;
     private GroupMember gmem;
@@ -26,6 +29,7 @@ public class Bills {
         bill_amount = bamt;
         bill_date = bdt;
         bill_member = bmem;
+        
     }
     //anju
     public void User(User newUsr)
