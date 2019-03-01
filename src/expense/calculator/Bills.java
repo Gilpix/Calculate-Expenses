@@ -150,7 +150,7 @@ public class Bills {
         this.id = id;
     }
     
-    public  void userDisplay()
+    public  void BillsDisplay()
     {
         System.out.println("Bill Current ID : "+getId());
         System.out.println("Bill Type : "+getBName());
