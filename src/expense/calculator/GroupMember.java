@@ -12,6 +12,9 @@ package expense.calculator;
 public class GroupMember {
     String member_name;
     String member_email;
+    
+    private String id;
+    
     private Groups gp;
     private GroupAdmin gad;
     
