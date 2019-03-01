@@ -149,5 +149,15 @@ public class Bills {
     public void setId(String id) {
         this.id = id;
     }
-       
+    
+    public  void userDisplay()
+    {
+        System.out.println("Bill Current ID : "+getId());
+        System.out.println("Bill Type : "+getBName());
+        System.out.println("Bill Description : "+getBDes());
+        System.out.println("Bill Amount : "+getBAmount());
+        System.out.println("Bill Date : "+getBDate());
+        System.out.println("Bill Member : "+getBMember());
+        //super.personDisplay();
+    }
 }
