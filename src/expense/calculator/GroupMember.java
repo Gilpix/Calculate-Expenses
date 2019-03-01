@@ -5,11 +5,20 @@
  */
 package expense.calculator;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  *
  * @author temp
  */
 public class GroupMember {
+    
+    Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
+    
     String member_name;
     String member_email;
     
