@@ -27,7 +27,7 @@ public class Bills {
         bill_date = bdt;
         bill_member = bmem;
     }
-    
+    //anju
     public void User(User newUsr)
     {
         this.us = newUsr;
