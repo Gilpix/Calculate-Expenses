@@ -110,4 +110,12 @@ public class GroupMember {
         this.id = id;
     }
     
+    public  void GroupMemberDisplay()
+    {
+        System.out.println("Bill Current ID : "+getId());
+        System.out.println("Bill Type : "+getMName());
+        System.out.println("Bill Description : "+getMEmail());
+        //super.personDisplay();
+    }
+    
 }
