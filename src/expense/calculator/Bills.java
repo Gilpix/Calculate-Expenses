@@ -158,6 +158,5 @@ public class Bills {
         System.out.println("Bill Amount : "+getBAmount());
         System.out.println("Bill Date : "+getBDate());
         System.out.println("Bill Member : "+getBMember());
-        //super.personDisplay();
     }
 }
