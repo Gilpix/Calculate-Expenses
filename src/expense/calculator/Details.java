@@ -86,6 +86,7 @@ public class Details {
     }
       public  void DetailsDisplay()
     {
+        System.out.println("Details Id : "+getId());
         System.out.println("Details date : "+getddate());
       
        
