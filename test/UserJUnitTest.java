@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author temp
  */
-public class personJUnitTest {
+public class UserJUnitTest {
     
-    public personJUnitTest() {
+    public UserJUnitTest() {
     }
     
     @BeforeClass
@@ -40,8 +40,8 @@ public class personJUnitTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-   @Test
-    public void getPersonCurrentId() {
+    @Test
+    public void getUserCurrentId() {
         
         
          System.out.println("Test number 1 for getUserCurrentId method");
@@ -49,12 +49,11 @@ public class personJUnitTest {
          String lastName ="Paul";
          char fN=lastName.charAt(0);
          char lN=lastName.charAt(0);
-         Calendar cal = Calendar.getInstance();
          
          String expectedResult="19-MAR-E-AP";
          
         
-         String realResult=expense.calculator.Person.getPersonCurrentId(firstName,lastName,cal);
+         String realResult=expense.calculator.User.getUserCurrentId(firstName,lastName);
          
          assertEquals(expectedResult,realResult);
     
