@@ -23,9 +23,10 @@ public class Details {
     Groups gp;
     
     
-    public Details (String Ddate)
+    public Details (String Ddate, Calendar cal)
     {
         detailsDate = Ddate;
+        detailsId =getDetailsCurrentId(cal);
         
     }
     public void setDdate(String date)
@@ -36,7 +37,7 @@ public class Details {
     {
         return detailsDate;
     }
-      public static String getDetailsCurrentId()
+      public static String getDetailsCurrentId(Calendar id)
     {
         
         
@@ -77,7 +78,7 @@ public class Details {
     }
 
     public String getId() {
-        return getDetailsCurrentId();
+        return detailsId;
     }
 
     public void setId(String id) {
