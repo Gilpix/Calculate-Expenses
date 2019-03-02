@@ -39,8 +39,7 @@ public class GroupAdmin extends Person {
      public  void groupAdminDisplay()
     {
         System.out.println("Admin Id :"+getId());
-         System.out.println("Group Admin Group name : "+getAdminGroupName());
-        System.out.println("Group Admin Name : "+getFName()+" "+getLName());
+         System.out.println("Group Admin Group Name : "+getAdminGroupName());
         System.out.println("Group Admin Email : "+getPEmail());
         super.personDisplay();
        
