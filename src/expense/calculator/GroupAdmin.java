@@ -18,14 +18,13 @@ public class GroupAdmin extends Person {
     String groupName;
      private String id;
     
-     Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+     
 
     public GroupAdmin(String gName, String fName, String lName, String pEmail,Calendar newId)
     {
         super(fName,lName, pEmail,newId);
         groupName = gName;
+        id=getGroupAdminCurrentId(gName);
     }
 
     public void setAdminGroupName(String gName)
@@ -49,7 +48,7 @@ public class GroupAdmin extends Person {
      
      
          public String getId() {
-        return getUserCurrentId();
+        return id;
     }
 
     public void setId(String id) {
@@ -57,21 +56,24 @@ public class GroupAdmin extends Person {
     }
      
      
-      public String getUserCurrentId()
+      public static String getGroupAdminCurrentId(String gAname)
     {
+        Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
           char f;
           char l;
               char hyphen='-';
-        if(getAdminGroupName().charAt(0)==' ')
+        if(gAname.charAt(0)==' ')
             f='X';
             else
-             f=getAdminGroupName().charAt(0);
+             f=gAname.charAt(0);
      
        
-        if(getAdminGroupName().indexOf(" ")>0 &&getAdminGroupName().indexOf(" ")>getAdminGroupName().length())
+        if(gAname.indexOf(" ")>0 &&gAname.indexOf(" ")<gAname.length())
         {
-             int index1 =getAdminGroupName().indexOf(" ");
-                 l=getAdminGroupName().charAt(index1+1);
+             int index1 =gAname.indexOf(" ");
+                 l=gAname.charAt(index1+1);
         }
         else
             l='X';
