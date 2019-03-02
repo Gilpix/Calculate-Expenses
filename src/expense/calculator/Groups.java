@@ -66,9 +66,7 @@ public class Groups {
     }
     
       public String getGroupCurrentId()
-    {
-       
-          char f;
+    {char f;
           char l;
               char hyphen='-';
         if(getgname().charAt(0)==' ')
@@ -76,12 +74,15 @@ public class Groups {
             else
              f=getgname().charAt(0);
      
-         if(getgname().charAt(0)==' ')
+       
+        if(getgname().indexOf(" ")>0 &&getgname().indexOf(" ")<getgname().length())
+        {
+             int index1 =getgname().indexOf(" ");
+                 l=getgname().charAt(index1+1);
+        }
+        else
             l='X';
-            else
-             l=getgname().charAt(0);
-        
-         
+  
          f = Character.toUpperCase(f);
          l = Character.toUpperCase(l);
          
@@ -114,10 +115,10 @@ public class Groups {
     }
      public  void GroupDisplay()
     {
-        System.out.println("User Current ID : "+getId());
+        System.out.println("Group Current ID : "+getId());
         System.out.println("Group Name : "+getgname());
         System.out.println("Group Member "+getgmember());
-        System.out.println("Group creation Date : "+getgdate());
+        System.out.println("Group Creation Date : "+getgdate());
        
        // super.personDisplay();
     }
