@@ -67,7 +67,7 @@ public class Friends {
              public String getFriendsCurrentId()
     {
        
-          char f;
+            char f;
           char l;
               char hyphen='-';
         if(getFname().charAt(0)==' ')
@@ -75,12 +75,15 @@ public class Friends {
             else
              f=getFname().charAt(0);
      
-         if(getFname().charAt(0)==' ')
+       
+        if(getFname().indexOf(" ")>0 && getFname().indexOf(" ")<getFname().length())
+        {
+             int index1 =getFname().indexOf(" ");
+                 l=getFname().charAt(index1+1);
+        }
+        else
             l='X';
-            else
-             l=getFname().charAt(0);
-        
-         
+  
          f = Character.toUpperCase(f);
          l = Character.toUpperCase(l);
          
@@ -102,7 +105,6 @@ public class Friends {
           else
               oe="O";  
          return  year+hyphen+month+hyphen+oe+hyphen+f+l;
-
     }
 
     public String getId() {
