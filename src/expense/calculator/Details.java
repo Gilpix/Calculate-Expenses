@@ -12,6 +12,7 @@ package expense.calculator;
 public class Details {
     
     String detailsDate;
+    private String detailsId;
     GroupMember gm;
     Groups gp;
     
