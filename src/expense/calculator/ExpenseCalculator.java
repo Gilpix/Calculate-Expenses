@@ -20,37 +20,34 @@ public class ExpenseCalculator {
         // TODO code application logic here\
 
         
-        /*Person p = new Person("Kuldeep","Singh","kul@gmail.com", Calendar.getInstance());
+        Person p = new Person("Kuldeep","Singh","kul@gmail.com",Calendar.getInstance());
+        p.setFirstName("KUL");
         p.personDisplay();
-        */
         
-         System.out.println("\n---------------------");
-        
-        
-        User u = new User(992386513,"Kuldeep","Singh","kul@gmail.com", Calendar.getInstance());
-        u.setUserMobNo(514292151);
-        u.setFirstName("Anju");
-        u.setLastName("Paul");
-        u.setPEmail("Kuldeep@gmail.com");
-        u.userDisplay();
-        
-        
-        /*
-         System.out.println("\n---------------------");
-        
-        
-        GroupAdmin ga = new GroupAdmin("Apartment","Kuldeep"," ","kul@gmail.com", Calendar.getInstance());
-        ga.setAdminGroupName("Niagra Falls");
-        ga.setFirstName("Raminder");
-        ga.setLastName("Singh");
-        ga.setPEmail("raminder@gmail.com");
-        ga.groupAdminDisplay();
         
         System.out.println("\n---------------------");
         
+        
+        User u = new User("992386513","Anju","Paul","kul@gmail.com", Calendar.getInstance());
+        u.userDisplay();
+        
+        
+     
+         System.out.println("\n---------------------");
+        
+        
+      GroupAdmin ga = new GroupAdmin("Apartment ","Suldeep","Singh","kul@gmail.com", Calendar.getInstance());
+    ga.groupAdminDisplay();
+        
+        System.out.println("\n---------------------");
+        
+        
+        //Groups g = new Groups("Apartment","Kuldeep"," ");
+       // g.GroupDisplay();
+        
          
          
-         
+            /*
         GroupMember gm=new GroupMember("Kamaldeep","kamal@gmail.com");
         gm.setMName("Kamal Padda");
         gm.setMEmail("kamala@gmail.com");
