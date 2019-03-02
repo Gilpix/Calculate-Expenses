@@ -13,10 +13,11 @@ import java.text.SimpleDateFormat;
  * @author temp
  */
 public class Person {
-    String lastName, firstName, pEmail,id;
+    String lastName, firstName, pEmail;
+    public static String id;
     
 
-    public String getId() {
+    public String getPId() {
         return id;
     }
 
@@ -26,7 +27,7 @@ public class Person {
     
     public Person(String fName, String lName, String email, Calendar newid)
     {
-        id = getUserCurrentId(fName,lName,newid);
+        this.id = getPersonCurrentId(fName,lName,newid);
         firstName = fName;
         lastName = lName;
         pEmail = email;
@@ -61,15 +62,16 @@ public class Person {
     }
     
     
-    public  void personDisplay()
+    public void personDisplay()
     {
          
         System.out.println("Person First Name : "+getFName());
         System.out.println("Person Last Name : "+getLName());
         System.out.println("Person Email : "+getPEmail());
+        System.out.println("Person Id : "+getPId());
     }
     
-     public String getUserCurrentId(String fname, String lName, Calendar id)
+     public String getPersonCurrentId(String fname, String lName, Calendar id)
     {
         Calendar calendar = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
