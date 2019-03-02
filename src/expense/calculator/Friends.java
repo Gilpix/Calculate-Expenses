@@ -112,4 +112,13 @@ public class Friends {
     public void setId(String id) {
         this. friendId= id;
     }
+     public  void FriendDisplay()
+    {
+        System.out.println("Friend Name : "+getFname());
+        System.out.println("Friend Email : "+getFemail());
+        System.out.println("Friend Mobileno  : "+getFmobile());
+      
+       
+    }
+    
 }
