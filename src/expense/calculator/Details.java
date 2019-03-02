@@ -5,11 +5,19 @@
  */
 package expense.calculator;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  *
  * @author temp
  */
 public class Details {
+      Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
+       
     
     String detailsDate;
     private String detailsId;
