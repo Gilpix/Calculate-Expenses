@@ -114,6 +114,7 @@ public class Friends {
     }
      public  void FriendDisplay()
     {
+        System.out.println("Friend Id : "+getId());
         System.out.println("Friend Name : "+getFname());
         System.out.println("Friend Email : "+getFemail());
         System.out.println("Friend Mobileno  : "+getFmobile());
