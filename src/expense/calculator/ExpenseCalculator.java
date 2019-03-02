@@ -20,7 +20,7 @@ public class ExpenseCalculator {
         // TODO code application logic here\
 
         
-        Person p = new Person("Kuldeep","Singh","kul@gmail.com",Calendar.getInstance());
+       Person p = new Person("Kuldeep","Singh","kul@gmail.com",Calendar.getInstance());
         p.setFirstName("KUL");
         p.personDisplay();
         
@@ -28,7 +28,7 @@ public class ExpenseCalculator {
         System.out.println("\n---------------------");
         
         
-        User u = new User("992386513","Anju","Paul","kul@gmail.com", Calendar.getInstance());
+       User u = new User("992386513","Anju","Paul","kul@gmail.com", Calendar.getInstance());
         u.userDisplay();
         
         
@@ -36,56 +36,36 @@ public class ExpenseCalculator {
          System.out.println("\n---------------------");
         
         
-      GroupAdmin ga = new GroupAdmin("Apartment ","Suldeep","Singh","kul@gmail.com", Calendar.getInstance());
-    ga.groupAdminDisplay();
+        GroupAdmin ga = new GroupAdmin("df d","Suldeep","Singh","kul@gmail.com", Calendar.getInstance());
+        ga.groupAdminDisplay();
         
         System.out.println("\n---------------------");
         
         
-        //Groups g = new Groups("Apartment","Kuldeep"," ");
-       // g.GroupDisplay();
+       Groups g = new Groups("Apartment","Kuldeep"," ");
+        g.GroupDisplay();
         
+          System.out.println("\n---------------------");
          
          
-            /*
         GroupMember gm=new GroupMember("Kamaldeep","kamal@gmail.com");
-        gm.setMName("Kamal Padda");
-        gm.setMEmail("kamala@gmail.com");
-        System.out.println("Group member name :"+gm.getMName());
-        System.out.println("Group Member Email : "+gm.getMEmail());
+        gm.GroupMemberDisplay();
         
          System.out.println("\n---------------------");
          
         
         Friends f= new Friends("Kamaldeep","kamal@gmail.com",99238651);
-        f.setFname("Kul Singh");
-        f.setFemail("kul@gmail.com");
-        f.setFmobile(514292151);
-        System.out.println("Add Friend : "+f.getFname());
-        System.out.println("Friend Email"+f.getFemail());
-        System.out.println("Friend Mobile No : "+f.getFmobile());
+        f.FriendDisplay();
         
          System.out.println("\n---------------------");
         
         Bills b=new Bills("Grocery","Niagra fall eating bill",1544,"2019-02-21","Kamala");
-        b.setBName("travel");
-        b.setBDes("Travel bill for Niagra Falls");
-        b.setBAmount(1521);
-        b.setBMember("Kamala");
-        b.setBDate("2019-02-15");
-        System.out.println("Bill Type : "+b.getBName());
-        System.out.println("Bill Discription : "+b.getBDes());
-        System.out.println("Bill Amount : "+b.getBAmount());
-        System.out.println("Bill Member Name : "+b.getBMember());
-        System.out.println("Bill Date : "+b.getBDate());
+        b.BillsDisplay();
         
         System.out.println("\n---------------------");
         
-        Details d=new Details("2019-02-15");
-        d.setDdate("2019-02-15");
-        System.out.println("Date Details of bill : "+d.getddate());
-        
-        */
+        Details d=new Details("2019-02-15",Calendar.getInstance());        
+        d.DetailsDisplay();
     }
     
 }
