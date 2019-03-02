@@ -38,19 +38,15 @@ public class Details {
     {
         return detailsDate;
     }
-      public String getUserCurrentId()
+      public String getDetailsCurrentId()
     {
        
           char f;
           char l;
               char hyphen='-';
       
-            f='X';
-    
-        
-            l='X';
-           
-           
+            f='X';        
+            l='X';      
         
          
          f = Character.toUpperCase(f);
@@ -78,7 +74,7 @@ public class Details {
     }
 
     public String getId() {
-        return getUserCurrentId();
+        return getDetailsCurrentId();
     }
 
     public void setId(String id) {
