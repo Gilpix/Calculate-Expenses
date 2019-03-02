@@ -112,6 +112,15 @@ public class Groups {
     public void setId(String id) {
         this.id = id;
     }
+     public  void GroupDisplay()
+    {
+        System.out.println("User Current ID : "+getId());
+        System.out.println("Group Name : "+getgname());
+        System.out.println("Group Member "+getgmember());
+        System.out.println("Group creation Date : "+getgdate());
+       
+       // super.personDisplay();
+    }
     
 
     
