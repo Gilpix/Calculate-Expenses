@@ -71,7 +71,7 @@ public class Person {
         System.out.println("Person Id : "+getPId());
     }
     
-     public String getPersonCurrentId(String fname, String lName, Calendar id)
+     public static String  getPersonCurrentId(String fname, String lName, Calendar id)
     {
         Calendar calendar = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");

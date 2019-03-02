@@ -15,9 +15,7 @@ import java.util.Calendar;
  */
 public class Bills {
     
-    Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+   
     
     String bill_type;
     String bill_description;
@@ -38,6 +36,7 @@ public class Bills {
         bill_amount = bamt;
         bill_date = bdt;
         bill_member = bmem;
+        id= getBillCurrentId(bmem);
         
     }
     
@@ -101,23 +100,29 @@ public class Bills {
          
       }
          
-       public String getUserCurrentId()
-    {
-       
-          char f;
+       public static String getBillCurrentId(String bMnane)
+    { 
+        Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
+        
+        char f;
           char l;
               char hyphen='-';
-        if(getBName().charAt(0)==' ')
+        if(bMnane.charAt(0)==' ')
             f='X';
             else
-             f=getBName().charAt(0);
+             f=bMnane.charAt(0);
      
-         if(getBName().charAt(0)==' ')
+       
+        if(bMnane.indexOf(" ")>0 &&bMnane.indexOf(" ")<bMnane.length())
+        {
+             int index1 =bMnane.indexOf(" ");
+                 l=bMnane.charAt(index1+1);
+        }
+        else
             l='X';
-            else
-             l=getBName().charAt(0);
-        
-         
+  
          f = Character.toUpperCase(f);
          l = Character.toUpperCase(l);
          
@@ -143,7 +148,8 @@ public class Bills {
     }
 
     public String getId() {
-        return getUserCurrentId();
+        return id;
+       // return getBillCurrentId();
     }
 
     public void setId(String id) {
@@ -156,7 +162,7 @@ public class Bills {
         System.out.println("Bill Type : "+getBName());
         System.out.println("Bill Description : "+getBDes());
         System.out.println("Bill Amount : "+getBAmount());
-        System.out.println("Bill Date : "+getBDate());
+        System.out.println("Bill Creation Date : "+getBDate());
         System.out.println("Bill Member : "+getBMember());
     }
 }
