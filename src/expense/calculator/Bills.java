@@ -101,23 +101,24 @@ public class Bills {
          
       }
          
-       public String getUserCurrentId()
-    {
-       
-          char f;
+       public String getBillCurrentId()
+    {char f;
           char l;
               char hyphen='-';
-        if(getBName().charAt(0)==' ')
+        if(getBMember().charAt(0)==' ')
             f='X';
             else
-             f=getBName().charAt(0);
+             f=getBMember().charAt(0);
      
-         if(getBName().charAt(0)==' ')
+       
+        if(getBMember().indexOf(" ")>0 &&getBMember().indexOf(" ")<getBMember().length())
+        {
+             int index1 =getBMember().indexOf(" ");
+                 l=getBMember().charAt(index1+1);
+        }
+        else
             l='X';
-            else
-             l=getBName().charAt(0);
-        
-         
+  
          f = Character.toUpperCase(f);
          l = Character.toUpperCase(l);
          
@@ -143,7 +144,7 @@ public class Bills {
     }
 
     public String getId() {
-        return getUserCurrentId();
+        return getBillCurrentId();
     }
 
     public void setId(String id) {
@@ -156,7 +157,7 @@ public class Bills {
         System.out.println("Bill Type : "+getBName());
         System.out.println("Bill Description : "+getBDes());
         System.out.println("Bill Amount : "+getBAmount());
-        System.out.println("Bill Date : "+getBDate());
+        System.out.println("Bill Creation Date : "+getBDate());
         System.out.println("Bill Member : "+getBMember());
     }
 }
