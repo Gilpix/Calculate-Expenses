@@ -15,9 +15,7 @@ import java.util.Calendar;
  */
 public class Bills {
     
-    Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+   
     
     String bill_type;
     String bill_description;
@@ -38,6 +36,7 @@ public class Bills {
         bill_amount = bamt;
         bill_date = bdt;
         bill_member = bmem;
+        id= getBillCurrentId(bmem);
         
     }
     
@@ -101,20 +100,25 @@ public class Bills {
          
       }
          
-       public String getBillCurrentId()
-    {char f;
+       public static String getBillCurrentId(String bMnane)
+    { 
+        Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
+        
+        char f;
           char l;
               char hyphen='-';
-        if(getBMember().charAt(0)==' ')
+        if(bMnane.charAt(0)==' ')
             f='X';
             else
-             f=getBMember().charAt(0);
+             f=bMnane.charAt(0);
      
        
-        if(getBMember().indexOf(" ")>0 &&getBMember().indexOf(" ")<getBMember().length())
+        if(bMnane.indexOf(" ")>0 &&bMnane.indexOf(" ")<bMnane.length())
         {
-             int index1 =getBMember().indexOf(" ");
-                 l=getBMember().charAt(index1+1);
+             int index1 =bMnane.indexOf(" ");
+                 l=bMnane.charAt(index1+1);
         }
         else
             l='X';
@@ -144,7 +148,8 @@ public class Bills {
     }
 
     public String getId() {
-        return getBillCurrentId();
+        return id;
+       // return getBillCurrentId();
     }
 
     public void setId(String id) {

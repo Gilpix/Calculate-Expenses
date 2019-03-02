@@ -14,9 +14,7 @@ import java.util.Calendar;
  * @author temp
  */
 public class Details {
-      Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+     
        
     
     String detailsDate;
@@ -25,9 +23,10 @@ public class Details {
     Groups gp;
     
     
-    public Details (String Ddate)
+    public Details (String Ddate, Calendar cal)
     {
         detailsDate = Ddate;
+        detailsId =getDetailsCurrentId(cal);
         
     }
     public void setDdate(String date)
@@ -38,8 +37,13 @@ public class Details {
     {
         return detailsDate;
     }
-      public String getDetailsCurrentId()
+      public static String getDetailsCurrentId(Calendar id)
     {
+        
+        
+         Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
        
           char f;
           char l;
@@ -74,7 +78,7 @@ public class Details {
     }
 
     public String getId() {
-        return getDetailsCurrentId();
+        return detailsId;
     }
 
     public void setId(String id) {

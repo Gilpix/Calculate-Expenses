@@ -15,9 +15,7 @@ import java.util.Calendar;
  */
 public class GroupMember {
     
-    Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+    
     
     String member_name;
     String member_email;
@@ -31,6 +29,7 @@ public class GroupMember {
     {
         member_name = mn;
         member_email = me;
+        id=getGroupMemberCurrentId(mn);
     }
     public void Groups(Groups newgp)
     {
@@ -61,20 +60,24 @@ public class GroupMember {
          
       }
        
-        public String getGroupMemberCurrentId()
-    {char f;
+        public static String getGroupMemberCurrentId(String gMname)
+    {
+        Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
+        char f;
           char l;
               char hyphen='-';
-        if(getMName().charAt(0)==' ')
+        if(gMname.charAt(0)==' ')
             f='X';
             else
-             f=getMName().charAt(0);
+             f=gMname.charAt(0);
      
        
-        if(getMName().indexOf(" ")>0 &&getMName().indexOf(" ")<getMName().length())
+        if(gMname.indexOf(" ")>0 &&gMname.indexOf(" ")<gMname.length())
         {
-             int index1 =getMName().indexOf(" ");
-                 l=getMName().charAt(index1+1);
+             int index1 =gMname.indexOf(" ");
+                 l=gMname.charAt(index1+1);
         }
         else
             l='X';
@@ -103,7 +106,7 @@ public class GroupMember {
     }
 
     public String getId() {
-        return getGroupMemberCurrentId();
+        return id;
     }
 
     public void setId(String id) {
