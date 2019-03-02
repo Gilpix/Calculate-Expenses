@@ -43,6 +43,8 @@ public class GroupAdmin extends Person {
          System.out.println("Group Admin Group name : "+getAdminGroupName());
         System.out.println("Group Admin Name : "+getFName()+" "+getLName());
         System.out.println("Group Admin Email : "+getPEmail());
+        super.personDisplay();
+       
     }
      
      
@@ -57,7 +59,6 @@ public class GroupAdmin extends Person {
      
       public String getUserCurrentId()
     {
-       
           char f;
           char l;
               char hyphen='-';
@@ -66,13 +67,15 @@ public class GroupAdmin extends Person {
             else
              f=getAdminGroupName().charAt(0);
      
-        int index1 =getAdminGroupName().indexOf(" ");
-         if(getAdminGroupName().charAt(index1+1)==' ')
+       
+        if(getAdminGroupName().indexOf(" ")>0 &&getAdminGroupName().indexOf(" ")>getAdminGroupName().length())
+        {
+             int index1 =getAdminGroupName().indexOf(" ");
+                 l=getAdminGroupName().charAt(index1+1);
+        }
+        else
             l='X';
-            else
-             l=getAdminGroupName().charAt(index1+1);
-        
-         
+  
          f = Character.toUpperCase(f);
          l = Character.toUpperCase(l);
          
