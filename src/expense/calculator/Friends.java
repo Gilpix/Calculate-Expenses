@@ -15,20 +15,19 @@ import java.util.Calendar;
  */
 public class Friends {
      
-    Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+  
        
     
     String friendName;
     String friendEmail;
     int    FriendMobileno;
-      private String friendId;
+    private String friendId;
     
     private User us;
     
     public Friends(String fname,String fEmail,int fmobilenumber)
     {
+        friendId=getFriendsCurrentId(fname);
         friendName = fname;
         friendEmail = fEmail;
         FriendMobileno = fmobilenumber;
@@ -64,22 +63,27 @@ public class Friends {
           return FriendMobileno;
          
       }
-             public String getFriendsCurrentId()
+             public static String getFriendsCurrentId(String name)
     {
+        
+        
+            Calendar calendar = Calendar.getInstance();
+             DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+             Calendar cal = Calendar.getInstance();
        
             char f;
           char l;
               char hyphen='-';
-        if(getFname().charAt(0)==' ')
+        if(name.charAt(0)==' ')
             f='X';
             else
-             f=getFname().charAt(0);
+             f=name.charAt(0);
      
        
-        if(getFname().indexOf(" ")>0 && getFname().indexOf(" ")<getFname().length())
+        if(name.indexOf(" ")>0 && name.indexOf(" ")<name.length())
         {
-             int index1 =getFname().indexOf(" ");
-                 l=getFname().charAt(index1+1);
+             int index1 =name.indexOf(" ");
+                 l=name.charAt(index1+1);
         }
         else
             l='X';
@@ -108,7 +112,7 @@ public class Friends {
     }
 
     public String getId() {
-        return getFriendsCurrentId();
+        return friendId;
     }
 
     public void setId(String id) {
