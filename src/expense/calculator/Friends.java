@@ -14,6 +14,8 @@ public class Friends {
     String friendName;
     String friendEmail;
     int    FriendMobileno;
+      private String friendId;
+    
     private User us;
     
     public Friends(String fname,String fEmail,int fmobilenumber)
