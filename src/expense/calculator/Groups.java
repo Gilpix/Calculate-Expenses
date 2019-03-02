@@ -65,4 +65,54 @@ public class Groups {
         return date;
     }
     
+      public String getGroupCurrentId()
+    {
+       
+          char f;
+          char l;
+              char hyphen='-';
+        if(getgname().charAt(0)==' ')
+            f='X';
+            else
+             f=getgname().charAt(0);
+     
+         if(getgname().charAt(0)==' ')
+            l='X';
+            else
+             l=getgname().charAt(0);
+        
+         
+         f = Character.toUpperCase(f);
+         l = Character.toUpperCase(l);
+         
+         String dte= dateFormat.format(cal.getTime());
+         String year,month,oe;
+         int index=0;
+         index =dte.indexOf("-");
+         year=dte.substring(0,index);
+         index++;
+         int sv =index;
+         index = dte.indexOf("-", index);
+          month=dte.substring(sv,index).toUpperCase();
+          index++;
+         
+          oe=dte.substring(index).toUpperCase();
+          int oE =Integer.parseInt(oe);
+          if(oE%2==0)
+              oe="E";
+          else
+              oe="O";  
+         return  year+hyphen+month+hyphen+oe+hyphen+f+l;
+
+    }
+         public String getId() {
+        return getGroupCurrentId();
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+
+    
 }
