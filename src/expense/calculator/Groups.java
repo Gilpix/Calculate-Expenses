@@ -14,115 +14,109 @@ import java.util.Calendar;
  * @author temp
  */
 public class Groups {
-    
-    
-    Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
-    
-    
-    
+
     String groupname;
     String groupmember;
     String date;
-    
-      private String id;
-  private GroupAdmin gpa;
-   public Groups (String Gname,String Gmember,String GDate) 
-   {
-       groupname = Gname;
-       groupmember = Gmember;
-       date = GDate;
-     
-   }
-   
-   public void GroupAdmin(GroupAdmin newgpa)
-   {
-       this.gpa = newgpa;
-   }
-     public void setname(String Gname)
-     {
-       groupname =  Gname; 
-     }
-    public void setmember(String Gmember)
-    {
-       groupmember  = Gmember;
-    }
-    public void setDate(String GDate)
-    {
+
+    private String id;
+    private GroupAdmin gpa;
+
+    public Groups(String Gname, String Gmember, String GDate) {
+        groupname = Gname;
+        groupmember = Gmember;
         date = GDate;
-    }
-    public String getgname()
-            {
-                return groupname;
-            }
-    public String getgmember()
-    {
-        return groupmember;
-    }
-    public String getgdate()
-    {
-        return date;
-    }
-    
-      public String getGroupCurrentId()
-    {char f;
-          char l;
-              char hyphen='-';
-        if(getgname().charAt(0)==' ')
-            f='X';
-            else
-             f=getgname().charAt(0);
-     
-       
-        if(getgname().indexOf(" ")>0 &&getgname().indexOf(" ")<getgname().length())
-        {
-             int index1 =getgname().indexOf(" ");
-                 l=getgname().charAt(index1+1);
-        }
-        else
-            l='X';
-  
-         f = Character.toUpperCase(f);
-         l = Character.toUpperCase(l);
-         
-         String dte= dateFormat.format(cal.getTime());
-         String year,month,oe;
-         int index=0;
-         index =dte.indexOf("-");
-         year=dte.substring(0,index);
-         index++;
-         int sv =index;
-         index = dte.indexOf("-", index);
-          month=dte.substring(sv,index).toUpperCase();
-          index++;
-         
-          oe=dte.substring(index).toUpperCase();
-          int oE =Integer.parseInt(oe);
-          if(oE%2==0)
-              oe="E";
-          else
-              oe="O";  
-         return  year+hyphen+month+hyphen+oe+hyphen+f+l;
+        id = getGroupCurrentId(Gname);
 
     }
-         public String getId() {
-        return getGroupCurrentId();
+
+    public void GroupAdmin(GroupAdmin newgpa) {
+        this.gpa = newgpa;
+    }
+
+    public void setname(String Gname) {
+        groupname = Gname;
+    }
+
+    public void setmember(String Gmember) {
+        groupmember = Gmember;
+    }
+
+    public void setDate(String GDate) {
+        date = GDate;
+    }
+
+    public String getgname() {
+        return groupname;
+    }
+
+    public String getgmember() {
+        return groupmember;
+    }
+
+    public String getgdate() {
+        return date;
+    }
+
+    public static String getGroupCurrentId(String gname) {
+        Calendar calendar = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+        Calendar cal = Calendar.getInstance();
+        char f;
+        char l;
+        char hyphen = '-';
+        if (gname.charAt(0) == ' ') {
+            f = 'X';
+        } else {
+            f = gname.charAt(0);
+        }
+
+        if (gname.indexOf(" ") > 0 && gname.indexOf(" ") < gname.length()) {
+            int index1 = gname.indexOf(" ");
+            l = gname.charAt(index1 + 1);
+        } else {
+            l = 'X';
+        }
+
+        f = Character.toUpperCase(f);
+        l = Character.toUpperCase(l);
+
+        String dte = dateFormat.format(cal.getTime());
+        String year, month, oe;
+        int index = 0;
+        index = dte.indexOf("-");
+        year = dte.substring(0, index);
+        index++;
+        int sv = index;
+        index = dte.indexOf("-", index);
+        month = dte.substring(sv, index).toUpperCase();
+        index++;
+
+        oe = dte.substring(index).toUpperCase();
+        int oE = Integer.parseInt(oe);
+        if (oE % 2 == 0) {
+            oe = "E";
+        } else {
+            oe = "O";
+        }
+        return year + hyphen + month + hyphen + oe + hyphen + f + l;
+
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void setId(String id) {
         this.id = id;
     }
-     public  void GroupDisplay()
-    {
-        System.out.println("Group Current ID : "+getId());
-        System.out.println("Group Name : "+getgname());
-        System.out.println("Group Member "+getgmember());
-        System.out.println("Group Creation Date : "+getgdate());
-       
-       // super.personDisplay();
-    }
-    
 
-    
+    public void GroupDisplay() {
+        System.out.println("Group Current ID : " + getId());
+        System.out.println("Group Name : " + getgname());
+        System.out.println("Group Member " + getgmember());
+        System.out.println("Group Creation Date : " + getgdate());
+
+    }
+
 }
