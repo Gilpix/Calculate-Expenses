@@ -64,4 +64,52 @@ public class Friends {
           return FriendMobileno;
          
       }
+             public String getFriendsCurrentId()
+    {
+       
+          char f;
+          char l;
+              char hyphen='-';
+        if(getFname().charAt(0)==' ')
+            f='X';
+            else
+             f=getFname().charAt(0);
+     
+         if(getFname().charAt(0)==' ')
+            l='X';
+            else
+             l=getFname().charAt(0);
+        
+         
+         f = Character.toUpperCase(f);
+         l = Character.toUpperCase(l);
+         
+         String dte= dateFormat.format(cal.getTime());
+         String year,month,oe;
+         int index=0;
+         index =dte.indexOf("-");
+         year=dte.substring(0,index);
+         index++;
+         int sv =index;
+         index = dte.indexOf("-", index);
+          month=dte.substring(sv,index).toUpperCase();
+          index++;
+         
+          oe=dte.substring(index).toUpperCase();
+          int oE =Integer.parseInt(oe);
+          if(oE%2==0)
+              oe="E";
+          else
+              oe="O";  
+         return  year+hyphen+month+hyphen+oe+hyphen+f+l;
+
+    }
+
+    public String getId() {
+        return getFriendsCurrentId();
+    }
+
+    public void setId(String id) {
+        this. friendId= id;
+    }
 }
