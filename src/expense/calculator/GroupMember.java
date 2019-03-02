@@ -61,10 +61,8 @@ public class GroupMember {
          
       }
        
-        public String getUserCurrentId()
-    {
-       
-          char f;
+        public String getGroupMemberCurrentId()
+    {char f;
           char l;
               char hyphen='-';
         if(getMName().charAt(0)==' ')
@@ -72,12 +70,15 @@ public class GroupMember {
             else
              f=getMName().charAt(0);
      
-         if(getMName().charAt(0)==' ')
+       
+        if(getMName().indexOf(" ")>0 &&getMName().indexOf(" ")<getMName().length())
+        {
+             int index1 =getMName().indexOf(" ");
+                 l=getMName().charAt(index1+1);
+        }
+        else
             l='X';
-            else
-             l=getMName().charAt(0);
-        
-         
+  
          f = Character.toUpperCase(f);
          l = Character.toUpperCase(l);
          
@@ -99,11 +100,10 @@ public class GroupMember {
           else
               oe="O";  
          return  year+hyphen+month+hyphen+oe+hyphen+f+l;
-
     }
 
     public String getId() {
-        return getUserCurrentId();
+        return getGroupMemberCurrentId();
     }
 
     public void setId(String id) {
