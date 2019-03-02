@@ -13,6 +13,8 @@ public class Groups {
     String groupname;
     String groupmember;
     String date;
+    
+      private String id;
   private GroupAdmin gpa;
    public Groups (String Gname,String Gmember,String GDate) 
    {
