@@ -15,10 +15,7 @@ import java.text.SimpleDateFormat;
 public class User extends Person {
     
     
-    Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
-       
+    
 
     String uMobileNo;
     private String id;
@@ -27,7 +24,7 @@ public class User extends Person {
     public User( String mobNo, String fName, String lName, String pEmail, Calendar newId)
     {
         super(fName,lName, pEmail,newId);
-       id=this.getUserCurrentId();
+       id=getUserCurrentId(fName,lName);
 
         uMobileNo = mobNo;
     }
@@ -46,21 +43,24 @@ public class User extends Person {
         return uMobileNo;
     }
     
-    public String getUserCurrentId()
+    public static String getUserCurrentId(String fname,String lname)
     {
+       Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
        
           char f;
           char l;
               char hyphen='-';
-        if(getFName().charAt(0)==' ')
+        if(fname.charAt(0)==' ')
             f='X';
             else
-             f=getFName().charAt(0);
+             f=fname.charAt(0);
      
-         if(getLName().charAt(0)==' ')
+         if(lname.charAt(0)==' ')
             l='X';
             else
-             l=getLName().charAt(0);
+             l=lname.charAt(0);
         
          
          f = Character.toUpperCase(f);
