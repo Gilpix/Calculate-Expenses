@@ -20,28 +20,28 @@ public class User extends Person {
     Calendar cal = Calendar.getInstance();
        
 
-    int uMobileNo;
+    String uMobileNo;
     private String id;
     
       
-    public User( int mobNo, String fName, String lName, String pEmail, Calendar newId)
+    public User( String mobNo, String fName, String lName, String pEmail, Calendar newId)
     {
         super(fName,lName, pEmail,newId);
-       // id=this.getUserCurrentId();
+       id=this.getUserCurrentId();
 
         uMobileNo = mobNo;
     }
     
     
     
-    public void setUserMobNo(int number)
+    public void setUserMobNo(String number)
     {
         uMobileNo = number;
     }
     
     
     
-    public int getUserMobNo()
+    public String getUserMobNo()
     {
         return uMobileNo;
     }
@@ -88,7 +88,7 @@ public class User extends Person {
     }
 
     public String getId() {
-        return getUserCurrentId();
+        return id;
     }
 
     public void setId(String id) {
@@ -98,10 +98,7 @@ public class User extends Person {
     public  void userDisplay()
     {
         System.out.println("User Current ID : "+getId());
-        System.out.println("User First Name : "+getFName());
-        System.out.println("User Last Name : "+getLName());
         System.out.println("User Mob No : "+getUserMobNo());
-        System.out.println("User Email : "+getPEmail());
         super.personDisplay();
     }
     
