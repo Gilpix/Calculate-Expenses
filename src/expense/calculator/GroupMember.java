@@ -115,9 +115,9 @@ public class GroupMember {
     
     public  void GroupMemberDisplay()
     {
-        System.out.println("Bill Current ID : "+getId());
-        System.out.println("Bill Type : "+getMName());
-        System.out.println("Bill Description : "+getMEmail());
+        System.out.println("Group Member ID : "+getId());
+        System.out.println("Group Member Name : "+getMName());
+        System.out.println("group Member Email : "+getMEmail());
     }
     
 }
