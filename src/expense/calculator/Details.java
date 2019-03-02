@@ -14,9 +14,7 @@ import java.util.Calendar;
  * @author temp
  */
 public class Details {
-      Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
+     
        
     
     String detailsDate;
@@ -38,8 +36,13 @@ public class Details {
     {
         return detailsDate;
     }
-      public String getDetailsCurrentId()
+      public static String getDetailsCurrentId()
     {
+        
+        
+         Calendar calendar = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+    Calendar cal = Calendar.getInstance();
        
           char f;
           char l;
