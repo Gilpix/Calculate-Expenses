@@ -41,7 +41,7 @@ public class personJUnitTest {
     // The methods must be annotated with annotation @Test. For example:
     //
    @Test
-    public void getUserCurrentId() {
+    public void getPersonCurrentId() {
         
         
          System.out.println("Test number 1 for getUserCurrentId method");
@@ -54,7 +54,7 @@ public class personJUnitTest {
          String expectedResult="19-MAR-E-AP";
          
         
-         String realResult=expense.calculator.User.getPersonCurrentId(firstName,lastName,cal);
+         String realResult=expense.calculator.Person.getPersonCurrentId(firstName,lastName,cal);
          
          assertEquals(expectedResult,realResult);
     
