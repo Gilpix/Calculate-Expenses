@@ -14,66 +14,61 @@ import java.util.Calendar;
  * @author temp
  */
 public class Details {
-     
-       
-    
+
     String detailsDate;
     private String detailsId;
     GroupMember gm;
     Groups gp;
-    
-    
-    public Details (String Ddate, Calendar cal)
-    {
+
+    public Details(String Ddate, Calendar cal) {
         detailsDate = Ddate;
-        detailsId =getDetailsCurrentId(cal);
-        
+        detailsId = getDetailsCurrentId(cal);
+
     }
-    public void setDdate(String date)
-    {
-       detailsDate =  date;
+
+    public void setDdate(String date) {
+        detailsDate = date;
     }
-    public String getddate()
-    {
+
+    public String getddate() {
         return detailsDate;
     }
-      public static String getDetailsCurrentId(Calendar id)
-    {
-        
-        
-         Calendar calendar = Calendar.getInstance();
-    DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
-    Calendar cal = Calendar.getInstance();
-       
-          char f;
-          char l;
-              char hyphen='-';
-      
-            f='X';        
-            l='X';      
-        
-         
-         f = Character.toUpperCase(f);
-         l = Character.toUpperCase(l);
-         
-         String dte= dateFormat.format(cal.getTime());
-         String year,month,oe;
-         int index=0;
-         index =dte.indexOf("-");
-         year=dte.substring(0,index);
-         index++;
-         int sv =index;
-         index = dte.indexOf("-", index);
-          month=dte.substring(sv,index).toUpperCase();
-          index++;
-         
-          oe=dte.substring(index).toUpperCase();
-          int oE =Integer.parseInt(oe);
-          if(oE%2==0)
-              oe="E";
-          else
-              oe="O";  
-         return  year+hyphen+month+hyphen+oe+hyphen+f+l;
+
+    public static String getDetailsCurrentId(Calendar id) {
+
+        Calendar calendar = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("yy-MMM-dd");
+        Calendar cal = Calendar.getInstance();
+
+        char f;
+        char l;
+        char hyphen = '-';
+
+        f = 'X';
+        l = 'X';
+
+        f = Character.toUpperCase(f);
+        l = Character.toUpperCase(l);
+
+        String dte = dateFormat.format(cal.getTime());
+        String year, month, oe;
+        int index = 0;
+        index = dte.indexOf("-");
+        year = dte.substring(0, index);
+        index++;
+        int sv = index;
+        index = dte.indexOf("-", index);
+        month = dte.substring(sv, index).toUpperCase();
+        index++;
+
+        oe = dte.substring(index).toUpperCase();
+        int oE = Integer.parseInt(oe);
+        if (oE % 2 == 0) {
+            oe = "E";
+        } else {
+            oe = "O";
+        }
+        return year + hyphen + month + hyphen + oe + hyphen + f + l;
 
     }
 
@@ -84,11 +79,10 @@ public class Details {
     public void setId(String id) {
         this.detailsId = id;
     }
-      public  void DetailsDisplay()
-    {
-        System.out.println("Details Id : "+getId());
-        System.out.println("Details date : "+getddate());
-      
-       
+
+    public void DetailsDisplay() {
+        System.out.println("Details Id : " + getId());
+        System.out.println("Details date : " + getddate());
+
     }
 }
