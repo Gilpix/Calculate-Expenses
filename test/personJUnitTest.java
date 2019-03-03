@@ -45,13 +45,13 @@ public class personJUnitTest {
         
         
          System.out.println("Test number 1 for getUserCurrentId method");
-         String firstName = "Anju";
-         String lastName ="Paul";
+         String firstName = "Kuldeep";
+         String lastName ="Singh";
          char fN=lastName.charAt(0);
          char lN=lastName.charAt(0);
          Calendar cal = Calendar.getInstance();
          
-         String expectedResult="19-MAR-E-AP";
+         String expectedResult="19-MAR-O-KS";
          
         
          String realResult=expense.calculator.Person.getPersonCurrentId(firstName,lastName,cal);
