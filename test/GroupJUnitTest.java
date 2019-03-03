@@ -45,10 +45,8 @@ public class GroupJUnitTest {
         
         
          System.out.println("Test for getGroupCurrentId method in bill class");
-         String name = "raminder Singh";
-         Calendar cal = Calendar.getInstance();
-         
-         String expectedResult="19-MAR-E-RS";
+         String name = "raminder Singh";         
+         String expectedResult="19-MAR-O-RS";
          
         
          String realResult=expense.calculator.Groups.getGroupCurrentId(name);
