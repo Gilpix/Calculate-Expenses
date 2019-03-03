@@ -46,9 +46,7 @@ public class BillJUnitTest {
         
          System.out.println("Test for getBillCurrentId method in bill class");
          String name = "Anju Paul";
-         Calendar cal = Calendar.getInstance();
-         
-         String expectedResult="19-MAR-E-AP";
+         String expectedResult="19-MAR-O-AP";
          
         
          String realResult=expense.calculator.Bills.getBillCurrentId(name);
