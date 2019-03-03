@@ -46,11 +46,9 @@ public class DetailsJUnitTest {
         
          System.out.println("Test number 1 for getDetailsCurrentId method");
          String firstName = "XX";
-        
-         
          Calendar cal = Calendar.getInstance();
          
-         String expectedResult="19-MAR-E-XX";
+         String expectedResult="19-MAR-O-XX";
          
         
          String realResult=expense.calculator.Details.getDetailsCurrentId(cal);

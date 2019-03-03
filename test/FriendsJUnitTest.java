@@ -17,22 +17,22 @@ import static org.junit.Assert.*;
  * @author temp
  */
 public class FriendsJUnitTest {
-    
+
     public FriendsJUnitTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -40,20 +40,15 @@ public class FriendsJUnitTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-     @Test
-     public void getUserCurrentId() {
-        
-        
-         System.out.println("Test number 1 for getUserCurrentId method");
-         String name = "Anju Paul";
-        
-         Calendar cal = Calendar.getInstance();
-         
-         String expectedResult="19-MAR-E-AP";
-         
-        
-         String realResult=expense.calculator.Friends.getFriendsCurrentId(name);
-         
-         assertEquals(expectedResult,realResult);
-}
+    @Test
+    public void getFriendsCurrentId() {
+
+        System.out.println("Test number 1 for getFriendsCurrentId method");
+        String name = "Anju Paul";
+        String expectedResult = "19-MAR-O-AP";
+
+        String realResult = expense.calculator.Friends.getFriendsCurrentId(name);
+
+        assertEquals(expectedResult, realResult);
+    }
 }
