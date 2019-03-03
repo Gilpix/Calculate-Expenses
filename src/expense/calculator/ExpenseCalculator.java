@@ -21,31 +21,26 @@ public class ExpenseCalculator {
 
         
        Person p = new Person("Kuldeep","Singh","kul@gmail.com",Calendar.getInstance());
-        p.setFirstName("KUL");
         p.personDisplay();
-        
         
         System.out.println("\n---------------------");
         
         
-       User u = new User("992386513","Anju","Paul","kul@gmail.com", Calendar.getInstance());
-        u.userDisplay();
-        
-        
-     
+       User u = new User("992386513","Anju","Paul","anju@gmail.com", Calendar.getInstance());
+       u.userDisplay();
          System.out.println("\n---------------------");
         
         
-        GroupAdmin ga = new GroupAdmin("df d","Suldeep","Singh","kul@gmail.com", Calendar.getInstance());
+        GroupAdmin ga = new GroupAdmin("Niagra Falls","Kamaleep","Singh","kamal@gmail.com", Calendar.getInstance());
         ga.groupAdminDisplay();
         
         System.out.println("\n---------------------");
         
         
-       Groups g = new Groups("Apartment","Kuldeep"," ");
-        g.GroupDisplay();
+       Groups g = new Groups("Apartment","Kuldeep","01-Mar-2019");
+       g.GroupDisplay();
         
-          System.out.println("\n---------------------");
+       System.out.println("\n---------------------");
          
          
         GroupMember gm=new GroupMember("Kamaldeep","kamal@gmail.com");
@@ -59,7 +54,7 @@ public class ExpenseCalculator {
         
          System.out.println("\n---------------------");
         
-        Bills b=new Bills("Grocery","Niagra fall eating bill",1544,"2019-02-21","Kamala");
+        Bills b=new Bills("Grocery","Niagra fall eating bill",1544.0,"2019-02-21","Raminder");
         b.BillsDisplay();
         
         System.out.println("\n---------------------");
