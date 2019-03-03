@@ -45,13 +45,13 @@ public class GroupAdminJUnitTest {
         
         
          System.out.println("Test number 1 for getGroupAdminCurrentId method");
-         String name = "Anju Paul";
+         String name = "Kuldeep Singh";
      
         
        
          Calendar cal = Calendar.getInstance();
          
-         String expectedResult="19-MAR-E-AP";
+         String expectedResult="19-MAR-O-KS";
          
         
          String realResult=expense.calculator.GroupAdmin.getGroupAdminCurrentId(name);
