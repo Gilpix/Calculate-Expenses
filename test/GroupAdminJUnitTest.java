@@ -47,13 +47,8 @@ public class GroupAdminJUnitTest {
          System.out.println("Test number 1 for getGroupAdminCurrentId method");
          String name = "Kuldeep Singh";
      
-        
-       
-         Calendar cal = Calendar.getInstance();
-         
          String expectedResult="19-MAR-O-KS";
          
-        
          String realResult=expense.calculator.GroupAdmin.getGroupAdminCurrentId(name);
          
          assertEquals(expectedResult,realResult);
