@@ -47,12 +47,9 @@ public class UserJUnitTest {
          System.out.println("Test number 1 for getUserCurrentId method");
          String firstName = "Kuldeep";
          String lastName ="Singh";
-         char fN=lastName.charAt(0);
-         char lN=lastName.charAt(0);
          
          String expectedResult="19-MAR-O-KS";
          
-        
          String realResult=expense.calculator.User.getUserCurrentId(firstName,lastName);
          
          assertEquals(expectedResult,realResult);
